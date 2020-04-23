@@ -1,0 +1,178 @@
+/* cabeza  */
+div.cabeza{
+	  background-color: #f2f0f5;
+    padding: 1rem 0;
+    position: fixed;
+    left: 0;
+    top: -1%;
+    right: 0;
+}
+ 
+
+/* cuerpo  */
+body{
+  margin: 0;
+  padding: 0;
+	background-color: #f0d0d0;
+}
+
+.logo-nav-container{
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ flex-wrap: wrap;
+}
+/* logo  */
+
+img.logo{
+	max-width: 15%;
+    margin-left: 2%;
+  }
+
+.menu-icon{
+	display: none;
+}
+
+.container{
+  width: 100%;
+  max-width: 1350px;
+  margin:0 auto;
+ }
+
+/* Menu */
+
+.navegacion ul {
+  margin: 0;
+  padding: 7px;
+  list-style: none;
+  margin-left:-34%;
+  width: 100%;
+
+  }
+
+
+.navegacion ul li{
+display: inline-block;
+
+}
+
+
+.navegacion ul li a{
+    
+  font-size: 1rem;
+   margin-left: 15px;
+  text-decoration: none;
+  color: #828080;
+  font-weight: 500;
+  font-size: 15px;
+
+}
+
+.navegacion ul li a:hover{
+ color: purple;
+}
+
+
+/* Baner imagenes Silder */
+
+.frase{
+  font-size: 40px;
+  font-family: 'Times New Roman', Times, serif;
+  color: purple;
+  text-align: center;
+  flex-shrink: 0;
+  flex-basis: 100%;
+  bottom: 40%;
+  animation: mover;
+  animation-duration: 30s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  
+  position: relative;
+}
+
+@keyframes mover{
+  0%, 20%{
+    transform: scaleY(1)
+  }
+  25%,45%{
+    transform: scaleY(0)
+  }
+  50%,75%{
+    transform: scaleY(1)
+  }
+}
+.contenedor{
+overflow: hidden; 
+width: 100%;
+  
+}
+
+.imagenes{
+ max-width: 120%;
+ 
+ padding: 0% 6%;
+ 
+ }
+
+ .contenedor ul{
+   list-style: none;
+   width: 300%;
+   display: flex;
+   margin-top: 59px;
+   animation: slide_imagenes 30s infinite alternate;
+  
+   
+ }
+
+@keyframes slide_imagenes {
+  0% {margin-left: -120px; }
+  20%{margin-left: -120px; }
+  
+  25%{margin-left: -1400px;}
+  45%{margin-left: -1400px;}
+
+  50%{margin-left: -2800px;}
+  75%{margin-left: -2800px;}
+
+}
+
+
+
+
+/*--------------------------------------------------------------------------  */ 
+@media only screen and (max-width: 1300PX) {
+
+  .navegacion ul li{
+    
+      display: block;
+      background-color: rgb(209, 168, 219);
+      opacity: .9;
+      transform: translatex(80px);
+      padding: 10px;
+      
+  }
+
+  .navegacion {   
+    position: absolute;
+    top: 0;
+    right: 0; 
+    }
+
+ img.logo{
+	max-width: 30%;
+    margin-left: 2%;
+  }
+      
+      
+.navegacion ul li:hover{
+    background-color: rgb(233, 222, 233);
+    opacity: .9;
+    transform: translatex(80px);
+   }    
+
+
+   
+}
+   
