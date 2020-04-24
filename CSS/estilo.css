@@ -47,15 +47,11 @@ img.logo{
   list-style: none;
   margin-left:-34%;
   width: 100%;
-
-  }
-
+ }
 
 .navegacion ul li{
 display: inline-block;
-
 }
-
 
 .navegacion ul li a{
     
@@ -65,81 +61,89 @@ display: inline-block;
   color: #828080;
   font-weight: 500;
   font-size: 15px;
-
 }
 
 .navegacion ul li a:hover{
  color: purple;
 }
 
+/* Slider Imagenes */
 
-/* Baner imagenes Silder */
-
-.frase{
-  font-size: 40px;
-  font-family: 'Times New Roman', Times, serif;
-  color: purple;
-  text-align: center;
-  flex-shrink: 0;
-  flex-basis: 100%;
-  bottom: 40%;
-  animation: mover;
-  animation-duration: 30s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+.baner{
   
-  position: relative;
-}
-
-@keyframes mover{
-  0%, 20%{
-    transform: scaleY(1)
-  }
-  25%,45%{
-    transform: scaleY(0)
-  }
-  50%,75%{
-    transform: scaleY(1)
-  }
-}
-.contenedor{
-overflow: hidden; 
-width: 100%;
+  width: 100%;
+  height:90vh;
+  bottom: 20px;
+  background-size: cover;
+  background-position: center;
+  transition: all .1s ease-in-out;
+  padding-top: 64px;
+  background-image: url('../IMG/baner1.jpeg');
+  animation: baner 20s infinite linear;
   
 }
 
-.imagenes{
- max-width: 120%;
- 
- padding: 0% 6%;
- 
- }
-
- .contenedor ul{
-   list-style: none;
-   width: 300%;
-   display: flex;
-   margin-top: 59px;
-   animation: slide_imagenes 30s infinite alternate;
+@keyframes baner{
+  0%{ 
+    background-image: url('../IMG/baner1.jpeg');
   
+  }
+  33%{
+    background-image: url('../IMG/baner1.jpeg');
+  }
+  34%{ 
+    background-image: url('../IMG/baner2.jpeg');
+  }
+  66%{
+    background-image: url('../IMG/baner2.jpeg');
+  }
+  67%{ 
+    background-image: url('../IMG/baner3.jpeg');
+  }
+  100%{
+    background-image: url('../IMG/baner3.jpeg');
+  }
+}
+
+
+ .letras {
+  display: flex;
+  width: 520px;
+  height: 100px;
+  font-size: 45px;
+  line-height: 50px;
+  justify-items: normal;  
+  color: rgb(124, 3, 98);
+  font-family: "Open Sans";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 40%;
+  bottom: 0;
+  margin: auto;
+  overflow: hidden;
+  }
+
+.titulos{
+ list-style: none;
+ padding-left: 10px;
+ margin: 0;  
+ animation: titulos 20s infinite;
+}
+
+@keyframes titulos{
+
+   0%{ margin-top: 0;}
+   33%{ margin-top: 0;}
+
+   34% {margin-top: -100px;}
+   66% {margin-top: -100px;} 
    
- }
+   67% {margin-top: -200px;}
+   100% {margin-top: -200px;}
 
-@keyframes slide_imagenes {
-  0% {margin-left: -120px; }
-  20%{margin-left: -120px; }
   
-  25%{margin-left: -1400px;}
-  45%{margin-left: -1400px;}
-
-  50%{margin-left: -2800px;}
-  75%{margin-left: -2800px;}
-
 }
-
-
-
 
 /*--------------------------------------------------------------------------  */ 
 @media only screen and (max-width: 1300PX) {
@@ -155,14 +159,14 @@ width: 100%;
   }
 
   .navegacion {   
-    position: absolute;
+    
     top: 0;
     right: 0; 
     }
 
  img.logo{
 	max-width: 30%;
-    margin-left: 2%;
+  margin-left: 2%;
   }
       
       
